@@ -19,8 +19,30 @@ page '/*.txt', layout: false
 # General configuration
 
 # Reload the browser automatically whenever files change
+
 configure :development do
   activate :livereload
+  activate :humans do |c|
+    c.team = [
+      {
+        name: "Murray Neil Summers",
+        site: "http://www.github.com/murraysum",
+        location: "Edinburgh, Scotland"
+      },
+      {
+        name: "Lindsay McDougall",
+        site: "http://www.github.com/lindisaurus",
+        location: "Edinburgh, Scotland"
+      }
+    ]
+    c.thanks = [
+      "Murray",
+      "Lindsay"
+    ]
+    c.site = {
+      :components => "Middleman"
+    }
+  end
 end
 
 ###
